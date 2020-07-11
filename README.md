@@ -1,46 +1,56 @@
-Jedes Bublefeld ist von einem Wrapper umgeben. 
-Im dem Bubblefeld ist die Gruße Bubble mit Verlinkung und Logo 
-enthalten. Neben der großen Bubble gibt es 4 kleine Bubbles.
-Die Position des Bubble-Wrapper wird relativ gesetzt.
-Die Position der kleinen Bubbles wird absolute gesetzt.
-Jede der kleinen Bubbles hat eine festgelegte Grundposition.
+# Digital Useless Box - CSS Bubbles Animation
 
-Die kleinen Bubbles werden mittels zweier css-Animationen animiert. 
-Dabei wird die Farbe und die Position verändert. Hierdurch wird eine
-pulsierende Bewegung simuliert.
+## HTML
 
-Es wäre natürlich von Vorteil, wenn alle bubbles eine andere Animation
-haben, damit eine Art Zufälligkeit entsteht. 
-Problem an der Sache ist die Konfiguration der Animationen. Damit man diese 
-Zufälligkeit bekommt muss man für jede kleine Bubble die Animation einzelln 
-definieren mit unterschiedlichen Anfangs- und Laufzeiten. Bei 4 Bubbles 
-mit 4 Sub-Bubbles sind das 16 Animationskofigurationen.
+Each bubble field is surrounded by a wrapper. The wrapper contains the big
+bubble with link and logo. Beside the big bubble there are 4 small bubbles. 
 
-Um das zu umgehen, gibt es nur eine CSS-Animation, die mit Variablen
-für animation-duration und animation-delay bestückt werden.
+## CSS
+The position of the bubble wrapper is set **"relative"**. The position of the 
+small bubbles is set **"absolute"**. Each of the small bubbles has a fixed basic
+position.
 
-Parameter Animation: 
-- animation_name 
-- animation_duration 
-- animation-timing-function
-- animation-delay
+The small bubbles are animated with two css-animations. The color and the 
+position is changed. Thereby a pulsating movement is simulated.
 
-Dabei wird zur Hilfe genommen, dass CSS-Variablen Selector abhängig sind.
-So setzten wir für jede Bubble und jede Sub-Bubble einen Multiplikatur.
+## Animation Configuration
+Of course it would be an advantage if all bubbles have a different animation,
+so that a kind of randomness is created. The problem is the configuration of 
+the animations. To get this randomness you have to define the animation for 
+each bubble individually with different start and run times. If you have 
+4 bubbles with 4 sub-bubbles, you have 16 animation configurations.
 
-Die Animation wird direkt auf die Sub-Bubbles gelegt und durch die 
-Selector abhängigen Variablen werden immer die passenden Multiplikatoren 
-für jede Sub-Bubble genutzt.
+To get around this, only one CSS-animation is created, which is filled with 
+variables for **"animation-duration"** and **"animation-delay"**.
 
-Folgende Subbubble Konfiguration ist möglich:
+## Parameter Animation
+1. animation_name
+2. animation_duration
+3. animation timing function
+4. animation delay
 
-.subbubble_x{
-	--sub-multiplicator: 1;
-	--animation-delay-offset: 1s;
-	--animation-duration-offset: 1s;
-	--position-left-offset: 10px;
-	--position-top-offset: 10px;
+## CSS Variables
+We take advantage of the fact that CSS variables are dependent on selectors. 
+So we set a multiplier for each bubble and each sub-bubble.
+
+The animation is placed directly on the sub-bubbles and because of the 
+selector dependent variables we always use the appropriate multiplier for
+each sub-bubble.
+
+## Example of a sub-bubble configuration
+
+```css
+.subbubble_x{ 
+  --sub-multiplicator: 1; 
+  --animation delay offset: 1s; 
+  --animation-duration-offset: 1s; 
+  --position-left-offset: 10px; 
+  --position-top-offset: 10px; 
 }
+```
 
-Theoretisch kann diese Konfiguration auch auf den großen Bubbles eingesetzt werden.
+In theory, this configuration can also be used on the large bubbles.
 
+## Licence
+
+Published under the MIT Licence
