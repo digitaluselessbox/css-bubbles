@@ -1,5 +1,24 @@
 # Digital Useless Box - CSS Bubbles Animation
 
+## Setup
+
+You need **npm** to initialise this projekt. Clone or download this project
+and simply run the following:
+
+```shell
+npm install
+```
+
+After that you can use grunt to create the css files for the projekt. There is 
+a file watcher witch register all changes to the scss files and recreate the 
+css files.
+
+you have the following grunt task:
+- default -> dev
+- dev
+- build
+
+
 ## HTML
 
 Each bubble field is surrounded by a wrapper. The wrapper contains the big
