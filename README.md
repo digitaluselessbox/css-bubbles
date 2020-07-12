@@ -9,6 +9,7 @@ and simply run the following:
 npm install
 ```
 
+## Grunt
 After that you can use grunt to create the css files for the projekt. There is 
 a file watcher witch register all changes to the scss files and recreate the 
 css files.
@@ -18,6 +19,9 @@ you have the following grunt task:
 - dev
 - build
 
+## Demo
+
+[https://digitaluselessbox.com/demo/css-bubbles/](https://digitaluselessbox.com/demo/css-bubbles/)
 
 ## HTML
 
